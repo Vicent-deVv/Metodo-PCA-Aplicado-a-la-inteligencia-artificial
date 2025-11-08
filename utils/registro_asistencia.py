@@ -96,3 +96,31 @@ def menu_principal():
 
     opcion = input("Elige una opción: ").strip()
     return opcion
+
+# utils/registro_asistencia.py (Añadir esta función)
+
+def ejecutar_menu():
+    while True:
+        opcion = menu_principal() 
+
+        if opcion == '1':
+            codigo = input("Ingresa el código del alumno (ej: 123456): ").strip().upper()
+            
+            if codigo:
+                capturar_y_registrar_fotos(codigo)
+            else:
+                print("El codigo de alumno no puede estar vacio.")
+            
+            input("\nPresiona ENTER para volver al menu")
+
+        elif opcion == '2':
+            print("Esta funcion se implementará en la entrega final.")
+            input("\nPresiona ENTER para volver al menú")
+
+        elif opcion == '3':
+            print("Saliendo del programa.")
+            break
+
+        else:
+            print("Opcion no válida. Intentalo de nuevo.")
+            time.sleep(1) 
