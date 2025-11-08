@@ -59,7 +59,7 @@ def capturar_y_registrar_fotos(codigo_alumno):
         if tiempo_actual - tiempo_ultima_captura >= INTERVALO_TOMA:
             
             ruta_guardado = guardar_foto(ruta_alumno, contador, frame)
-            print(f"✅ Foto {contador} guardada en: {ruta_guardado}")
+            print(f" Foto {contador} guardada en: {ruta_guardado}")
             
             contador += 1
             tiempo_ultima_captura = tiempo_actual # Actualiza el tiempo de la última captura
