@@ -21,7 +21,7 @@ def capturar_y_registrar_fotos(codigo_alumno):
     print(f"\n Preparando el registro para {codigo_alumno}")
     
     # --- CUENTA REGRESIVA ---
-    duracion_cuenta_regresiva = 3
+    duracion_cuenta_regresiva = 5
     tiempo_inicio = time.time()
     tiempo_finalizar = tiempo_inicio + duracion_cuenta_regresiva
     
