@@ -81,3 +81,18 @@ def capturar_y_registrar_fotos(codigo_alumno):
     
     if contador > NUM_FOTOS_POR_ALUMNO:
         print(f"\n🎉 ¡Registro de {codigo_alumno} completado con éxito! ({NUM_FOTOS_POR_ALUMNO} fotos tomadas)")
+
+def menu_principal():
+    # Limpia la terminal para que el menú siempre se vea limpio.
+    os.system('cls' if os.name == 'nt' else 'clear') 
+
+    print("=" * 40)
+    print("      Sistema de toma de asistencia mediante metodo PCA")
+    print("=" * 40)
+    print("1.Registrar Nuevo Alumno (Capturar Fotos)")
+    print("2.Realizar Asistencia (Todavia no incluido)")
+    print("3.Salir")
+    print("=" * 40)
+
+    opcion = input("Elige una opción: ").strip()
+    return opcion
