@@ -3,6 +3,7 @@ __pycache__/
 *.py[codz]
 *$py.class
 alumnos_data/
+dataset_alumnos/
 
 # C extensions
 *.so
