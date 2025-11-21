@@ -114,7 +114,7 @@ def proceso_tomar_asistencia():
             nombre_detectado, confianza = modelo.predecir(rostro_procesado)
             
             # Umbral de confianza (Ajustar segun luz: menor es mejor. < 3000 es decente)
-            if confianza < 4000:
+            if confianza < 2500:
                 color_rect = (0, 255, 0) # Verde
                 texto_pantalla = f"{nombre_detectado} ({int(confianza)})"
             else:
