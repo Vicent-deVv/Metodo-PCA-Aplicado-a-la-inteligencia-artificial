@@ -15,7 +15,7 @@ class ModeloPCA:
             print("Error: No hay imágenes para entrenar.")
             return False
             
-        print(f"Entrenando PCA con {len(imagenes)} imágenes...")
+        print(f"Entrenando PCA con {len(imagenes)} imágenes")
         self.face_recognizer.train(imagenes, etiquetas)
         self.mapa_nombres = mapa_nombres
         self.entrenado = True
@@ -23,9 +23,9 @@ class ModeloPCA:
         return True
 
     def predecir(self, rostro_img):
-        """
-        Recibe un recorte de rostro (100x100 gris) y devuelve el código del alumno.
-        """
+
+        #Recibe un recorte de rostro (100x100 gris) y devuelve el código del alumno.
+
         if not self.entrenado:
             return "Modelo No Entrenado", float('inf')
         

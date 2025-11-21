@@ -14,7 +14,7 @@ SIZE_FACE = (100, 100) # Tamaño estándar para PCA
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
 def detectar_y_procesar_rostro(frame):
-    """Detecta rostro, lo recorta, convierte a gris y redimensiona"""
+    #Detecta rostro, lo recorta, convierte a gris y redimensiona
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(gray, 1.3, 5)
     
@@ -34,7 +34,7 @@ def capturar_y_registrar_fotos(codigo_alumno):
     ruta_alumno = crear_directorio_alumno(codigo_alumno)
     cap = cv2.VideoCapture(0)
     
-    print(f"Posiciona tu rostro. Buscando cara...")
+    print(f"Posiciona tu rostro. Buscando cara")
     
     contador = 1
     tiempo_ultima_captura = time.time()
@@ -78,12 +78,12 @@ def capturar_y_registrar_fotos(codigo_alumno):
     print(f"\nRegistro completado para {codigo_alumno}")
 
 def proceso_tomar_asistencia():
-    # 1. Entrenar modelo al vuelo
+    # 1. Entrenar modelo
     modelo = ModeloPCA()
     imagenes, etiquetas, nombres = cargar_dataset_entrenamiento()
     
     if imagenes is None or len(imagenes) == 0:
-        print("ERROR: No hay datos para entrenar. Registra alumnos primero.")
+        print("No hay datos para entrenar. Registra alumnos primero.")
         return
 
     exito = modelo.entrenar(imagenes, etiquetas, nombres)
